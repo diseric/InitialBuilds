@@ -127,10 +127,11 @@ git clone https://github.com/PowerShellMafia/PowerSploit.git
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
 
 git clone https://github.com/phillips321/adaudit.git
-git clone https://github.com/GhostPack/Rubeus.git
 
+git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 
-
-
-need to get url from packakges git clone https://github.com/BloodHoundAD/BloodHound.git
-need to get url from packakges git clone https://github.com/BloodHoundAD/SharpHound.git
+apt install BloodHound
+mkdir /tools/BloodHound
+wget https://github.com/BloodHoundAD/BloodHound/releases/download/4.1.1/BloodHound-win32-x64.zip
+git clone https://github.com/BloodHoundAD/BloodHound.git
+cd /tools
