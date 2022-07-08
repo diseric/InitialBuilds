@@ -20,6 +20,8 @@ source /home/kali/.bashrc
 toolsdir='/home/kali/tools'
 windowsToolsdir='/home/kali/windowsTools'
 
+ssh-keygen -F github.com || ssh-keyscan github.com >> ~/.ssh/known_hosts
+
 echo -e ${Green} "System Abbreviation?"${NC}
 	read -e varSystemAbbr
 	mkdir '/home/kali/'$varSystemAbbr
