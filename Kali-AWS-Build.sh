@@ -19,8 +19,8 @@ source .bashrc
 
 echo -e ${Green} "System Abbreviation?"${NC}
 	read -e varSystemAbbr
-	mkdir /$varSystemAbbr
-	mkdir /$varSystemAbbr/ipLists
+	mkdir '/'$varSystemAbbr
+	mkdir '/'$varSystemAbbr'/ipLists'
 
 	if [ -d /tools ]; then
 	  echo ${Green}"Begin installing tools..."${NC}
