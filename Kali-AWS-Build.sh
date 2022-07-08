@@ -128,13 +128,13 @@ git clone https://github.com/bitsadmin/wesng.git
 go install github.com/OJ/gobuster/v3@latest
 
 #installing ruby and rubygems to sinstall evilwinrm	
-	mkdir /temp
-	cd /temp
-	sudo apt -y install ruby
-	wget https://rubygems.org/rubygems/rubygems-3.3.17.zip
-	unzip rubygems-3.3.17.zip
-	cd rubygems-3.3.17
-	gem install evil-winrm
+#	mkdir /temp
+#	cd /temp
+#	sudo apt -y install ruby
+#	wget https://rubygems.org/rubygems/rubygems-3.3.17.zip
+#	unzip rubygems-3.3.17.zip
+#	cd rubygems-3.3.17
+#	gem install evil-winrm
 
 cd /tools
 
