@@ -7,23 +7,33 @@ Green='\033[0;32m'        # Green
 Yellow='\033[0;33m'       # Yellow
 NC='\033[0m' 			  # No Color
 
+$toolsdir='/tools'
+$windowsTools='/windowsTools'
+
 echo -e ${Green}"apt update/apt upgrade"
 sudo apt -y update
 sudo apt -y upgrade
 
-echo -e ${Red}"Script Creates Tools folder and Base ORG Folder"${NC}
-
-	if [ -d /tools ]; then
-	  echo ${Green}"Begin installing tools..."${NC}
-	else
-	  echo "Tools directory not found. Creating directory"
-	  mkdir /tools
-	fi
-
 echo -e ${Green} "System Abbreviation?"${NC}
 	read -e varSystemAbbr
 	mkdir /$varSystemAbbr
-	cd /$varSystemAbbr
+	mkdir /$varSystemAbbr/ipLists
+
+	if [ -d $toolsdir ]; then
+	  echo ${Green}"Begin installing tools..."${NC}
+	else
+	  echo "Tools directory not found. Creating directory"
+	  mkdir $toolsdir
+	fi
+
+	if [ -d $toolsdir ]; then
+	  echo ${Green}"Begin installing tools..."${NC}
+	else
+	  echo "Tools directory not found. Creating directory"
+	  mkdir $windowsTools
+	fi
+
+
 
 
 cd /tools
