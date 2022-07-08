@@ -76,7 +76,7 @@ git clone git@github.com:andresriancho/nimbostratus.git
 	cd $toolsdir
 
 git clone https://github.com/duo-labs/cloudmapper.git
-	sudo apt -y install autoconf automake libtool python3.7-dev python3-tk jq openssl osslsigncode mingw-w64
+	sudo apt -y install autoconf automake libtool python3.10-dev python3-tk jq openssl osslsigncode mingw-w64
 	cd cloudmapper/
 	python3 -m venv ./venv && source venv/bin/activate
 	pip install -r requirements.txt
