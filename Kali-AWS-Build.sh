@@ -7,6 +7,10 @@ Green='\033[0;32m'        # Green
 Yellow='\033[0;33m'       # Yellow
 NC='\033[0m' 			  # No Color
 
+echo -e ${Green}"apt update/apt upgrade"
+sudo apt -y update
+sudo apt -y upgrade
+
 echo -e ${Red}"Script Creates Tools folder and Base ORG Folder"${NC}
 
 	if [ -d /tools ]; then
@@ -27,6 +31,7 @@ cd /tools
 echo -e ${Green}"Begin Installing Tools"${NC}
 
 apt install python3.10-venv
+
 wget https://dot.net/v1/dotnet-install.sh
 bash ./dotnet-install.sh -c Current
 
@@ -41,7 +46,7 @@ echo -e ${Green}"Installed AWS CLI"${NC}
 echo ${Green}"Downloading Google Chrome"${NC}
 	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 echo -e ${Green}"Installing Chrome"${NC}
-	sudo apt install ./google-chrome-stable_current_amd64.deb
+	sudo apt -y install ./google-chrome-stable_current_amd64.deb
 echo -e ${Green}"Installed Chrome"${NC}
 echo -e ${Green}"Installing Windows Exploit Suggestor"${NC}
 	pip install wesng 
@@ -107,7 +112,7 @@ go install github.com/OJ/gobuster/v3@latest
 #installing ruby and rubygems to sinstall evilwinrm	
 	mkdir /temp
 	cd /temp
-	sudo apt install ruby
+	sudo apt -y install ruby
 	wget https://rubygems.org/rubygems/rubygems-3.3.17.zip
 	unzip rubygems-3.3.17.zip
 	cd rubygems-3.3.17
@@ -118,7 +123,8 @@ cd /tools
 git clone https://github.com/carlospolop/hacktricks.git
 
 git clone https://github.com/PowerShellMafia/PowerSploit.git
-
+	
+	mkdir /tools/exploits
 	cd /tools/exploits
 		git clone https://github.com/nomi-sec/PoC-in-GitHub.git
 		git clone https://github.com/abatchy17/WindowsExploits.git
@@ -131,7 +137,7 @@ git clone https://github.com/phillips321/adaudit.git
 
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 
-apt install BloodHound
+apt -y install BloodHound
 mkdir /tools/BloodHound
 wget https://github.com/BloodHoundAD/BloodHound/releases/download/4.1.1/BloodHound-win32-x64.zip
 git clone https://github.com/BloodHoundAD/BloodHound.git
