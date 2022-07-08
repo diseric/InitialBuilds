@@ -15,7 +15,7 @@ sudo apt install -y golang
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-source ~/.bashrc
+source /home/kali/.bashrc
 
 echo -e ${Green} "System Abbreviation?"${NC}
 	read -e varSystemAbbr
