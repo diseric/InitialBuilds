@@ -161,7 +161,7 @@ git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 wget https://github.com/BloodHoundAD/BloodHound/releases/download/4.1.1/BloodHound-win32-x64.zip
 
 
-apt -y install BloodHound
+apt -y install bloodHound
 
 cd $toolsdir
 git clone https://github.com/BloodHoundAD/BloodHound.git
