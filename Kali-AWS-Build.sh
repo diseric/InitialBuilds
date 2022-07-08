@@ -40,8 +40,6 @@ echo -e ${Green} "System Abbreviation?"${NC}
 	fi
 
 
-
-
 cd /tools
 
 echo -e ${Green}"Begin Installing Tools"${NC}
@@ -74,7 +72,7 @@ git clone git@github.com:andresriancho/nimbostratus.git
 	cd /tools
 
 git clone https://github.com/duo-labs/cloudmapper.git
-	sudo apt-get install autoconf automake libtool python3.7-dev python3-tk jq openssl osslsigncode mingw-w64
+	sudo apt -y install autoconf automake libtool python3.7-dev python3-tk jq openssl osslsigncode mingw-w64
 	cd cloudmapper/
 	python3 -m venv ./venv && source venv/bin/activate
 	pip install -r requirements.txt
@@ -84,6 +82,10 @@ git clone https://github.com/nccgroup/ScoutSuite.git
 	virtualenv -p python3 venv
 	source venv/bin/activate
 	pip install -r requirements.txt
+
+
+
+apt -y install payloadsallthethings feroxbuster oscanner redis-tools sipvicious tnscmd10g nishang odat gedit wkhtmltopdf libreoffice agrep Eyewitness Linpeas cme iptraf-ng Pip3 ldap3 
 	
 pip3 install -U pip
 pip3 install -U pacu
@@ -102,7 +104,7 @@ wget https://github.com/atredispartners/flamingo/releases/download/v0.0.19/flami
 
 wget https://github.com/inguardians/peirates/releases/download/v1.1.10/peirates-linux-386.tar.xz
 
-pip3 install --user cloudsplaining
+pip install cloudsplaining
 
 git clone https://github.com/optiv/ScareCrow.git
 	cd ScareCrow
