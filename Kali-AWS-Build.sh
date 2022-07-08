@@ -150,9 +150,10 @@ git clone https://github.com/PowerShellMafia/PowerSploit.git
 	mkdir $toolsdir/exploits
 	cd $toolsdir/exploits
 		git clone https://github.com/nomi-sec/PoC-in-GitHub.git
-		git clone https://github.com/abatchy17/WindowsExploits.git
+		cd $windowsToolsdir
 		git clone https://github.com/SecWiki/windows-kernel-exploits.git
-		cd $toolsdir
+		git clone https://github.com/abatchy17/WindowsExploits.git
+	cd $toolsdir
 
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
 
