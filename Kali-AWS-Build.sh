@@ -7,9 +7,6 @@ Green='\033[0;32m'        # Green
 Yellow='\033[0;33m'       # Yellow
 NC='\033[0m' 			  # No Color
 
-$toolsdir='/tools'
-$windowsTools='/windowsTools'
-
 echo -e ${Green}"apt update/apt upgrade"
 sudo apt -y update
 sudo apt -y upgrade
@@ -25,18 +22,18 @@ echo -e ${Green} "System Abbreviation?"${NC}
 	mkdir /$varSystemAbbr
 	mkdir /$varSystemAbbr/ipLists
 
-	if [ -d $toolsdir ]; then
+	if [ -d /tools ]; then
 	  echo ${Green}"Begin installing tools..."${NC}
 	else
 	  echo "Tools directory not found. Creating directory"
-	  mkdir $toolsdir
+	  mkdir /tools
 	fi
 
 	if [ -d $toolsdir ]; then
 	  echo ${Green}"Begin installing tools..."${NC}
 	else
 	  echo "Tools directory not found. Creating directory"
-	  mkdir $windowsTools
+	  mkdir /windowsTools
 	fi
 
 
@@ -153,10 +150,13 @@ wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_
 
 git clone https://github.com/phillips321/adaudit.git
 
+cd /windowsTools
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
+wget https://github.com/BloodHoundAD/BloodHound/releases/download/4.1.1/BloodHound-win32-x64.zip
+
 
 apt -y install BloodHound
-mkdir /tools/BloodHound
-wget https://github.com/BloodHoundAD/BloodHound/releases/download/4.1.1/BloodHound-win32-x64.zip
-git clone https://github.com/BloodHoundAD/BloodHound.git
+
 cd /tools
+git clone https://github.com/BloodHoundAD/BloodHound.git
+
