@@ -57,14 +57,16 @@ echo -e ${Green}"Downloading VSCode"${NC}
 echo -e ${Green}"Installing AWS CLI"${NC}
 	sudo dpkg -i code_1.69.0-1657183742_amd64.deb
 	sudo apt install -f
+	rm code_1.69.0-1657183742_amd64.deb
 echo -e ${Green}"Installing AWS CLI"${NC}
 	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" 
 	unzip awscliv2.zip 
 echo -e ${Green}"Installed AWS CLI"${NC}
 echo ${Green}"Downloading Google Chrome"${NC}
-	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 echo -e ${Green}"Installing Chrome"${NC}
 	sudo apt -y install ./google-chrome-stable_current_amd64.deb
+	rm https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 echo -e ${Green}"Installed Chrome"${NC}
 echo -e ${Green}"Installing Windows Exploit Suggestor"${NC}
 	pip install wesng 
