@@ -87,7 +87,7 @@ git clone https://github.com/nccgroup/ScoutSuite.git
 
 
 
-apt -y install payloadsallthethings feroxbuster oscanner redis-tools sipvicious tnscmd10g nishang odat gedit wkhtmltopdf libreoffice agrep eyewitness Linpeas cme iptraf-ng pip3 
+apt -y install payloadsallthethings feroxbuster oscanner redis-tools sipvicious tnscmd10g nishang odat gedit wkhtmltopdf libreoffice agrep eyewitness linpeas cme iptraf-ng pip3 
 	
 pip3 install -U pip
 pip3 install -U pacu
