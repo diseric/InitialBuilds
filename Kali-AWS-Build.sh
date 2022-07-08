@@ -17,27 +17,31 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 source /home/kali/.bashrc
 
+toolsdir='/home/kali/tools'
+windowsToolsdir='/home/kali/windowsTools'
+
 echo -e ${Green} "System Abbreviation?"${NC}
 	read -e varSystemAbbr
-	mkdir '/'$varSystemAbbr
-	mkdir '/'$varSystemAbbr'/ipLists'
-
-	if [ -d /tools ]; then
-	  echo ${Green}"Begin installing tools..."${NC}
-	else
-	  echo "Tools directory not found. Creating directory"
-	  mkdir /tools
-	fi
+	mkdir '/home/kali/'$varSystemAbbr
+	mkdir '/home/kali/'$varSystemAbbr'/ipLists'
 
 	if [ -d $toolsdir ]; then
 	  echo ${Green}"Begin installing tools..."${NC}
 	else
 	  echo "Tools directory not found. Creating directory"
-	  mkdir /windowsTools
+	  mkdir $toolsdir
+	fi
+
+	if [ -d $windowsToolsdir ]; then
+	  echo ${Green}"Begin installing tools..."${NC}
+	else
+	  echo "Tools directory not found. Creating directory"
+	  mkdir $windowsToolsdir
 	fi
 
 
-cd /tools
+
+cd $toolsdir
 
 echo -e ${Green}"Begin Installing Tools"${NC}
 
@@ -67,7 +71,7 @@ echo -e ${Green} "Begin Cloning tools"${NC}
 git clone git@github.com:andresriancho/nimbostratus.git
 	cd nimbostratus
 	pip install -r requirements.txt
-	cd /tools
+	cd $toolsdir
 
 git clone https://github.com/duo-labs/cloudmapper.git
 	sudo apt -y install autoconf automake libtool python3.7-dev python3-tk jq openssl osslsigncode mingw-w64
@@ -83,11 +87,12 @@ git clone https://github.com/nccgroup/ScoutSuite.git
 
 
 
-apt -y install payloadsallthethings feroxbuster oscanner redis-tools sipvicious tnscmd10g nishang odat gedit wkhtmltopdf libreoffice agrep eyewitness Linpeas cme iptraf-ng pip3 ldap3 
+apt -y install payloadsallthethings feroxbuster oscanner redis-tools sipvicious tnscmd10g nishang odat gedit wkhtmltopdf libreoffice agrep eyewitness Linpeas cme iptraf-ng pip3 
 	
 pip3 install -U pip
 pip3 install -U pacu
-  
+pip3 install -U ldap3
+
 go get -v github.com/Shopify/kubeaudit
 
 pip install kube-hunter
@@ -134,30 +139,30 @@ go install github.com/OJ/gobuster/v3@latest
 #	cd rubygems-3.3.17
 #	gem install evil-winrm
 
-cd /tools
+cd $toolsdir
 
 git clone https://github.com/carlospolop/hacktricks.git
 
 git clone https://github.com/PowerShellMafia/PowerSploit.git
 	
-	mkdir /tools/exploits
-	cd /tools/exploits
+	mkdir $toolsdir/exploits
+	cd $toolsdir/exploits
 		git clone https://github.com/nomi-sec/PoC-in-GitHub.git
 		git clone https://github.com/abatchy17/WindowsExploits.git
 		git clone https://github.com/SecWiki/windows-kernel-exploits.git
-		cd /tools
+		cd $toolsdir
 
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64
 
 git clone https://github.com/phillips321/adaudit.git
 
-cd /windowsTools
+cd $windowsToolsdir
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 wget https://github.com/BloodHoundAD/BloodHound/releases/download/4.1.1/BloodHound-win32-x64.zip
 
 
 apt -y install BloodHound
 
-cd /tools
+cd $toolsdir
 git clone https://github.com/BloodHoundAD/BloodHound.git
 
