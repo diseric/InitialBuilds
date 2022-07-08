@@ -14,6 +14,12 @@ echo -e ${Green}"apt update/apt upgrade"
 sudo apt -y update
 sudo apt -y upgrade
 
+sudo apt install -y golang
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+source .bashrc
+
 echo -e ${Green} "System Abbreviation?"${NC}
 	read -e varSystemAbbr
 	mkdir /$varSystemAbbr
