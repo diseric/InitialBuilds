@@ -51,9 +51,9 @@ wget https://dot.net/v1/dotnet-install.sh
 bash ./dotnet-install.sh -c Current
 
 echo -e ${Green}"Downloading VSCode"${NC}
-	wget https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64.deb
+	wget https://github.com/diseric/InitialBuilds/raw/main/code_1.69.0-1657183742_amd64.deb
 echo -e ${Green}"Installing AWS CLI"${NC}
-	sudo dpkg -i linux-deb-x64.deb
+	sudo dpkg -i code_1.69.0-1657183742_amd64.deb
 	sudo apt install -f
 echo -e ${Green}"Installing AWS CLI"${NC}
 	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" 
